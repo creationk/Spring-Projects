@@ -1,0 +1,37 @@
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+		http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>DefaultServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DefaultServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>PrivateServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PrivateServlet</servlet-name>
+		<url-pattern>*.private</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>PublicServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PublicServlet</servlet-name>
+		<url-pattern>*.public</url-pattern>
+	</servlet-mapping>
+</web-app>
+
+<!-- When the url http://localhost:8090/HelloWorld/srujana.do is accessed, 
+	using the url pattern the controller is identified (controller = last part 
+	of url minus url pattern. -->
+<!-- So the control goes to the controller having @RequestMapping("/srujana") => SrujanaController -->
