@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class DefaultController {
 	@RequestMapping("/")
 	public String welcome(Model model) {
-		model.addAttribute("private_link", "http://localhost:8080/helloworld/srujana.private");
-		model.addAttribute("public_link", "http://localhost:8080/helloworld/srujana.public");
+		model.addAttribute("private_link", "http://localhost:8080/SpringHelloWorld-Maven/srujana.private");
+		model.addAttribute("public_link", "http://localhost:8080/SpringHelloWorld-Maven/srujana.public");
 		return "index";
 	}
 }
